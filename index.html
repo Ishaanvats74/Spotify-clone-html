@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="icon" href="/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav{
+        font-family: 'Ubuntu' , sans-serif ;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav >
+      <ul class="flex items-center h-[65px] bg-black text-white ">
+        <li class="brand flex items-center font-bold text-2xl px-3 "><img src="/logo.png" alt="logo" class="w-11 px-2"/>Spotify</li>
+        <li class="px-3">Home</li>
+        <li class="px-3">About</li>
+      </ul>
+    </nav>
+
+    <div class="container min-h-[75vh]">
+        <h1>Best of NCS - no CopyRight</h1>
+        <div class="songlist"></div>
+        <div class="songbanner"></div>
+    </div>
+
+    <div class="bottom sticky h-32 bg-black bottom-0 flex flex-col justify-center items-center">
+        <input type="range" name="range" class="w-[80vw]" id="myProgressBar" min="0" max="100">
+        <div class="icons my-2">
+            <!-- fontawsome icons -->
+            <i class="fa-solid fa-3x fa-backward-step text-white cursor-pointer"></i>
+            <i class="fa-regular fa-3x fa-circle-play text-white cursor-pointer"></i>
+            <i class="fa-solid fa-3x fa-forward-step text-white cursor-pointer"></i>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d27141c24a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
