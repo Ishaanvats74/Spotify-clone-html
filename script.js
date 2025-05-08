@@ -10,7 +10,7 @@ let previous = document.getElementById('previous');
 let gif = document.getElementById('gif');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 let masterSongName = document.getElementById('masterSongName');
-let container = document.querySelector('.container');
+let cover = document.querySelector('.albumCover');
 
 
 let songs = [
@@ -92,7 +92,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
             gif.style.opacity = 1;
-            container.style.backgroundImage = `url('${songs[songIndex].coverPath}')`;
+            albumCover.src = songs[songIndex].coverPath;
         }
     
     })
@@ -111,7 +111,7 @@ next.addEventListener('click',()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity = 1;
-    container.style.backgroundImage = `url("${songs[songIndex].coverPath}")`;
+    albumCover.src = songs[songIndex].coverPath;
 });
 
 previous.addEventListener('click', ()=>{
@@ -127,5 +127,5 @@ previous.addEventListener('click', ()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity = 1;
-    container.style.backgroundImage = `url("${songs[songIndex].coverPath}")`;
+    albumCover.src = songs[songIndex].coverPath;
 })

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify - Your favourite music is here</title>
+        <link rel="stylesheet" href="style2.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Playlists</li>
+            <li>Library</li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="songList">
+            <h1>Best Songs <span class="playlist-info">9 songs • 45 min</span></h1>
+            
+            <div class="songItemContainer">
+                <div class="songItem" data-index="0">
+                    <img src="covers/1.jpg" alt="Song 1">
+                    <span class="songName">Let Me Love You</span>
+                    <span class="artist">DJ Snake ft. Justin Bieber</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="1">
+                    <img src="covers/2.jpg" alt="Song 2">
+                    <span class="songName">co2</span>
+                    <span class="artist">Prateek Kuhad</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="2">
+                    <img src="covers/3.jpg" alt="Song 3">
+                    <span class="songName">yoooo</span>
+                    <span class="artist">The Weeknd</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="3">
+                    <img src="covers/4.jpg" alt="Song 4">
+                    <span class="songName">la la</span>
+                    <span class="artist">Dua Lipa</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="4">
+                    <img src="covers/5.jpg" alt="Song 5">
+                    <span class="songName">How are you</span>
+                    <span class="artist">Post Malone</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="5">
+                    <img src="covers/6.jpg" alt="Song 6">
+                    <span class="songName">Love you never</span>
+                    <span class="artist">Coldplay</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="6">
+                    <img src="covers/7.jpg" alt="Song 7">
+                    <span class="songName">Love you</span>
+                    <span class="artist">Billie Eilish</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="7">
+                    <img src="covers/8.jpg" alt="Song 8">
+                    <span class="songName">bye</span>
+                    <span class="artist">Imagine Dragons</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem" data-index="8">
+                    <img src="covers/9.jpg" alt="Song 9">
+                    <span class="songName">hello</span>
+                    <span class="artist">Adele</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-container">
+            <div class="cover">
+                <img src="covers/1.jpg" alt="Current Album" id="albumCover">
+                <div class="album-info">
+                    <h3 id="currentSongTitle">Let Me Love You</h3>
+                    <p id="currentArtist">DJ Snake ft. Justin Bieber</p>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <div class="music-visualization">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+                <div class="extra-controls">
+                    <button class="control-btn"><i class="fas fa-random"></i></button>
+                    <button class="control-btn"><i class="fas fa-redo"></i></button>
+                    <button class="control-btn"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Bottom Bar -->
+    <div class="bottom">
+        <input type="range" name="range" class="slider" id="myProgressBar" min="0" value="0" max="100">
+        <div class="time-display">
+            <span id="currentTime">0:00</span>
+            <span id="totalTime">5:34</span>
+        </div>
+        
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fas fa-2x fa-step-backward" id="previous"></i>
+            <i class="far fa-2x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-2x fa-step-forward" id="next"></i> 
+        </div>
+        
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> 
+            <span id="masterSongName">Let Me Love You</span>
+            <span class="current-artist">DJ Snake ft. Justin Bieber</span>
+        </div>
+    </div>
+    
+    <script src="script2.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+</html>
