@@ -10,6 +10,7 @@ let previous = document.getElementById('previous');
 let gif = document.getElementById('gif');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 let masterSongName = document.getElementById('masterSongName');
+let container = document.querySelector('.container');
 
 
 let songs = [
@@ -78,6 +79,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
             masterPlay.classList.remove('fa-pause-circle');
             masterPlay.classList.add('fa-play-circle');
             gif.style.opacity = 0;
+            
         } else {
             makeAllPlays();
             songIndex = clickedIndex;
@@ -90,6 +92,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
             gif.style.opacity = 1;
+            container.style.backgroundImage = `url('${songs[songIndex].coverPath}')`;
         }
     
     })
@@ -108,6 +111,7 @@ next.addEventListener('click',()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity = 1;
+    container.style.backgroundImage = `url("${songs[songIndex].coverPath}")`;
 });
 
 previous.addEventListener('click', ()=>{
@@ -123,4 +127,5 @@ previous.addEventListener('click', ()=>{
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity = 1;
+    container.style.backgroundImage = `url("${songs[songIndex].coverPath}")`;
 })
